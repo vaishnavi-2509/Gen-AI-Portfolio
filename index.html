@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navigation Example</title>
+  <title>GEN-AI Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -64,9 +64,25 @@
       align-items: center;
     }
 
+    .button-link {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #4285F4;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .button-link:hover {
+      background-color: #357ae8;
+    }
+
     /* Section styles */
     section {
-      height: 100vh;
+      /* height: 100vh; */
       padding: 60px 20px;
       display: flex;
       align-items: center;
@@ -80,10 +96,10 @@
       background-color: #eaeaea;
     }
 
-    #introduction { background-color: #ffecb3; }
-    #report { background-color: #d1c4e9; }
-    #ppt { background-color: #c5e1a5; }
-    #result { background-color: #b2ebf2; }
+    #introduction { background-color: white; }
+    #report { background-color: white }
+    #ppt { background-color: white; }
+    #result { background-color: white; }
   </style>
 </head>
 <body>
@@ -97,12 +113,23 @@
     </ul>
   </nav>
 
+  <div style="padding:10px 60px; width:60%; margin:0 auto; ">
+    <h1>About Me</h1>
+      <p>Hello! I'm <strong>Vaishnavi Agrawal</strong>, a passionate and driven student at KLE Technological University, currently specializing in Generative AI. With a deep curiosity for machine learning and artificial intelligence, I am focused on exploring how these technologies can revolutionize industries and improve human experiences.
+    </p>
+    <p>
+        Through my academic journey and hands-on projects, I've gained a solid foundation in AI methodologies, neural networks, and data science, with a particular interest in generative models, deep learning, and their real-world applications.
+
+    </p>
+  </div>
   <section id="introduction" >
+
+
     <div style="display: flex; flex-direction: column;">
         <div style="text-align: center;">
-            <img src="https://cdn.bap-software.net/2024/07/27001309/generative-AI.jpg"/ ">
+            <img src="https://cdn.bap-software.net/2024/07/27001309/generative-AI.jpg"/ style="width:60%;">
         </div>
-        <div style="padding:10px 60px ">
+        <div style="padding:10px 60px; width:60%; margin:0 auto; ">
             <h1>Introduction</h1>
             <p>Generative AI, a subset of artificial intelligence, focuses on creating new content by learning patterns and structures from existing data. Leveraging advanced algorithms like deep learning, generative models can produce text, images, audio, videos, and even 3D designs that mimic human creativity. These systems use architectures such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and transformers like GPT (Generative Pre-trained Transformers) to understand and generate contextually relevant outputs. Their applications span various industries, from generating realistic artwork to developing conversational agents, offering immense possibilities for automation and innovation.</p>
         </div>
@@ -110,27 +137,34 @@
     
   </section>
 
-  <section id="report">
+  <h1 style="text-align: center;">Course Project Report</h1>
+  <section id="report" style="display: flex;" >
+      <div class="pdf-container">
+          <embed src="GEN_AI_REPORT.pdf" type="application/pdf" style="width: 60%; height: 90vh;">
+          </div>
+        </section>
+        
+<h1 style="text-align: center;">Course Project Presentation</h1>
+<section id="ppt">
     <div class="pdf-container">
-        <!-- <h1>Report</h1> -->
-        <div><embed src="GEN_AI_REPORT.pdf" type="application/pdf"></div>
-    </div>
+        <embed src="Gen_AI_PPT.pdf" type="application/pdf" style="width: 60%; height: 90vh;">
+        </div>
+    </section>
     
-  </section>
-
-  <section id="ppt">
-    <div class="pdf-container">
-        <!-- <h1>PPT</h1> -->
-        <div><embed src="Gen_AI_PPT.pdf" type="application/pdf"></div>
+    <h1 style="text-align: center;">Results</h1>
+  <section id="result" style="display: flex; flex-direction: column;">
+    <div style="text-align: center;">
+        <img src="./genRes1.jpg" style="width:60%;">
+        <h4>Fig 1: Input of the beach image and three output variations are generated</h4>
+        <img src="./genRes2.jpg" style="width:60%;">
+        <h4>Fig 2: Input of Mona Lisa and three output variations are generated</h4>
     </div>
-  </section>
 
-  <section id="result">
     <div>
         <h1>Code</h1>
         <pre>
             <code>
-                import requests
+import requests
 from io import BytesIO
 from diffusers import StableDiffusionImageVariationPipeline
 from PIL import Image
@@ -180,6 +214,15 @@ for i in range(num_variations):
     print(f"Image result_{i+1}.jpg saved.")
             </code>
         </pre>
+    </div>
+
+    <div>
+        <h1>Google Colab Integration</h1>
+        <a href="https://colab.research.google.com/drive/1eweOD6AjH0udT6DQ7yZhLaEUm8oLPZyL?usp=sharing" 
+            target="_blank" 
+            class="button-link">
+            Open in Google Colab
+        </a>
     </div>
   </section>
 </body>
